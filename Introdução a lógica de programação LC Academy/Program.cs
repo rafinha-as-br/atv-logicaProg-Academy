@@ -1,16 +1,8 @@
-﻿int[] numeros = new int[4];
+﻿int numero1, numero2, resultado;
+Console.WriteLine("Digite o primeiro número: ");
+numero1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite o segundo número: ");
+numero2 = int.Parse(Console.ReadLine());
 
-for (int i = 0; i < 4; i++)
-{
-    Console.WriteLine("Digite um número:");
-    numeros[i] = int.Parse(Console.ReadLine());
-}
-
-Console.WriteLine("\nNúmeros ímpares digitados:");
-for (int i = 0; i < 4; i++)
-{
-    if (numeros[i] % 2 != 0)
-    {
-        Console.WriteLine(numeros[i]);
-    }
-}
+resultado = Math.Abs(numero2 - numero1);
+Console.WriteLine("O valor absoluto desta subtração é: " + resultado);
