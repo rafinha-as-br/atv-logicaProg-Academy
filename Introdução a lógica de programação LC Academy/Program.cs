@@ -1,20 +1,10 @@
-﻿float num;
-int numero, resultado;
+﻿int numero, resultado=0;
 
 Console.WriteLine("Digite um número: ");
-num = float.Parse(Console.ReadLine());
-if (num < 0)
-{
-    Console.WriteLine("Não é possível fatorar números negativos");
-}
-else
-{
-    numero = (int)num;
-    resultado = numero;
-    for (int i=numero; i>1; i--)
-    {
-        resultado = resultado * (i-1);
-    }
+numero = int.Parse(Console.ReadLine());
 
-    Console.WriteLine("O fatorial de " + numero + " é " + resultado);
+for(int i=1; i <=9; i++)
+{
+    resultado = numero * i;
+    Console.WriteLine($"{numero} x {i} = {resultado}");
 }
