@@ -1,28 +1,29 @@
-﻿float numero1, numero2;
-int num1,num2, resultado;
-Console.WriteLine("Digite o primeiro número: ");
-numero1 = float.Parse(Console.ReadLine());
-Console.WriteLine("Digite o segundo número: ");
-numero2 = float.Parse(Console.ReadLine());
+﻿int a, b, c, x, x1,x2;
+float resultado;
+int delta;
 
-num1 = (int)Math.Round(numero1);
-num2 = (int)Math.Round(numero2);
+Console.WriteLine("Digite o valor de A: ");
+a = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite o valor de B: ");
+b = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite o valor de C: ");
+c = int.Parse(Console.ReadLine());
 
-resultado = CalcularMMC(num1, num2); 
+delta = b* b - 4 * a * c;
 
-Console.WriteLine($"O MMC de {num1} e {num2} é {resultado}");
-
-static int CalcularMMC(int a, int b)
+if(delta > 0)
 {
-    return (a * b) / CalcularMDC(a, b);
-}
-static int CalcularMDC(int a, int b)
+    x1 = (-b + (int)Math.Sqrt(delta)) / (2 * a);
+    x2 = (-b - (int)Math.Sqrt(delta)) / (2 * a);
+    Console.WriteLine("Trata-se de duas raízes, portanto: ");
+    Console.WriteLine("O X1 é: " + x1);
+    Console.WriteLine("O X2 é: " + x2);
+} else if (delta == 0)
 {
-    while (b != 0)
-    {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
+    x = -b / (2 * a);
+    Console.WriteLine("Trata-se de uma raiz única, portanto o X é: " + x);
+
+} else
+{
+    Console.WriteLine("Não existe raiz real");
 }
