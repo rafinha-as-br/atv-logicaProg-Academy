@@ -1,11 +1,20 @@
-﻿double cat1, cat2;
-double hipotenusa;
+﻿float num;
+int numero, resultado;
 
-Console.WriteLine("Digite o valor do cateto 1: ");
-cat1 = int.Parse(Console.ReadLine());
-Console.WriteLine("Digite o valor do cateto 2: ");
-cat2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite um número: ");
+num = float.Parse(Console.ReadLine());
+if (num < 0)
+{
+    Console.WriteLine("Não é possível fatorar números negativos");
+}
+else
+{
+    numero = (int)num;
+    resultado = numero;
+    for (int i=numero; i>1; i--)
+    {
+        resultado = resultado * (i-1);
+    }
 
-hipotenusa = Math.Sqrt((cat1 * cat1) + (cat2 * cat2));
-
-Console.WriteLine("O valor da hipotenusa é: " + hipotenusa);
+    Console.WriteLine("O fatorial de " + numero + " é " + resultado);
+}
