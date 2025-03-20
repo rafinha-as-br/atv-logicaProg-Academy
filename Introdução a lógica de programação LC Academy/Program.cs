@@ -1,7 +1,11 @@
-﻿int a, b, c, x, x1,x2;
+﻿//Questão 5
+
+//Cria as variáveis necessárias
+int a, b, c, x, x1,x2;
 float resultado;
 int delta;
 
+//entrada de dados
 Console.WriteLine("Digite o valor de A: ");
 a = int.Parse(Console.ReadLine());
 Console.WriteLine("Digite o valor de B: ");
@@ -9,10 +13,13 @@ b = int.Parse(Console.ReadLine());
 Console.WriteLine("Digite o valor de C: ");
 c = int.Parse(Console.ReadLine());
 
+//realiza o calculo de delta 
 delta = b* b - 4 * a * c;
 
+//verifica o valor de delta, realiza os cálculos de X1 e X2 e já imprime os resultados
 if(delta > 0)
 {
+    
     x1 = (-b + (int)Math.Sqrt(delta)) / (2 * a);
     x2 = (-b - (int)Math.Sqrt(delta)) / (2 * a);
     Console.WriteLine("Trata-se de duas raízes, portanto: ");
