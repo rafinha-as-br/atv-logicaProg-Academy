@@ -1,10 +1,17 @@
-﻿float numero1, numero2, resultado;
+﻿
+// Questão 1
 
+
+// cria as variáveis
+float numero1, numero2, resultado;
+
+// solicita os números decimais
 Console.WriteLine("Informe o primeiro número decimal:");
 numero1 = float.Parse(Console.ReadLine());
 Console.WriteLine("Informe o segundo número decimal:");
 numero2 = float.Parse(Console.ReadLine());
 
+// verifica qual número é maior
 if (numero1 > numero2)
 {
     resultado = numero1 / numero2;
